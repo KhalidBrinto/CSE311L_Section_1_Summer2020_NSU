@@ -1,0 +1,16 @@
+SELECT MAX(salary) AS "Maximum", MIN(salary)AS "Minimum", SUM(salary) AS "Sum", ROUND(AVG(salary),0) AS "Average"
+FROM Employees;
+
+
+SELECT MAX(salary) AS "Maximum", MIN(salary)AS "Minimum", SUM(salary) AS "Sum", ROUND(AVG(salary),0) AS "Average"
+FROM Employees
+GROUP BY Job_id;
+
+SELECT Job_id, COUNT(employee_id) AS "Number of People"
+FROM Employees
+GROUP BY Job_id;
+
+SELECT employee_id, manager_id MIN(salary)
+FROM Employees
+GROUP BY manager_id
+ORDER BY salary DESC;
