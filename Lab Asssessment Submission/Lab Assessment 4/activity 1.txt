@@ -1,0 +1,1 @@
+SELECT lastname, department_id, department_name FROM Employees;
