@@ -1,6 +1,6 @@
 <?php
 function data_insert() {
-    return "INSERT INTO Departments(jod_id,job_title,MIN_SALARY,MAX_SALARY) VALUES
+    return "INSERT INTO jobs(job_id,job_title,MIN_SALARY,MAX_SALARY) VALUES
             (AD_PRESS,'PRESIDENT',20000,40000),
             (AD_VP,'Administration Vice President',15000,30000),
             (AD_ASST,'Administration Assistant',3000,6000),
@@ -12,7 +12,7 @@ function data_insert() {
             (ST_CLERK,'Stock Clerk',2000,5000),
             (IT_PROG,'Programmer',4000,10000),
             (MK_MAN,'Marketing Manager',9000,15000),
-            (MK_REP,'Marketing Representative',4000,9000)";
+            (MK_REP,'Marketing Representative',4000,9000);";
 }
 
 $servername = 'localhost';
@@ -20,7 +20,7 @@ $username = 'root';
 $password = '';
 $database = 'VS_CODE_TEST';
 
-$link = mysqli_connect($servername,$username,$password,$password);
+$link = mysqli_connect($servername,$username,$password,$database);
 
 if($link == false){
     die("Error: could not connect." .mysql_connect_error($link));

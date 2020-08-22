@@ -1,0 +1,1 @@
+SELECT lastname, hire_date FROM `Employees` WHERE hire_date IN 1994;

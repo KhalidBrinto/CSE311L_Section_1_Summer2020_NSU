@@ -1,10 +1,10 @@
 <?php
 function create_table(){
     return "CREATE TABLE jobs(
-            job_id VARCHAR2(10) PRIMARY KEY NOT NULL,
-            job_title VARCHAR2(35) NOT NULL,
-            MIN_SALARY NUMBER(6),
-            MAX_SALARY NUMBER(6)";
+        job_id VARCHAR(10) PRIMARY KEY NOT NULL,
+        job_title VARCHAR(35) NOT NULL,
+        MIN_SALARY INT(6),
+        MAX_SALARY INT(6))";
 
 }
 
@@ -22,7 +22,8 @@ if($link == false){
 if(mysqli_query($link,create_table())){
     echo "Table created";
 }
+
 else{
-    echo "Table already exists.\n";
+    echo "Table already exists.". mysql_error($link);
 }
 ?>
