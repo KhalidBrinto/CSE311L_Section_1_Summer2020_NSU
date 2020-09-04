@@ -1,0 +1,5 @@
+SELECT Department_Name, concat(l.Street_Adress,', ',l.City,', ',l.State_Province) as location, count(e.First_Name) as 'Number of people', round(avg(e.Salary),2) as Salary 
+FROM departments d
+JOIN locations l ON d.Location_id=l.Location_id
+JOIN employees e ON d.Department_id = e.Department_id
+GROUP BY d.Department_id

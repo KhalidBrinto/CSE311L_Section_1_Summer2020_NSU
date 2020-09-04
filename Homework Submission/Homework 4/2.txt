@@ -1,0 +1,5 @@
+SELECT Last_Name, Manager_id, max(Salary) 
+FROM employees 
+GROUP BY Manager_id
+HAVING Manager_id IS NOT NULL AND max(Salary)>6000
+ORDER BY max(Salary) DESC

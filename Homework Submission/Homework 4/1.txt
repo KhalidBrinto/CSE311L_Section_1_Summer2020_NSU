@@ -1,0 +1,3 @@
+SELECT concat(First_Name,' ',Last_Name) AS Name, min(Salary), max(Salary), avg(Salary) 
+FROM employees 
+GROUP BY Job_Id

@@ -1,0 +1,3 @@
+SELECT Last_Name, job_Id, count(Last_Name) as 'Number of people'
+FROM employees 
+GROUP BY Job_Id
